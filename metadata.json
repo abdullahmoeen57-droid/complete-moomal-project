@@ -1,0 +1,6 @@
+{
+  "name": "Moomal College of Nursing & Allied Health Sciences",
+  "description": "Official portal for Moomal College of Nursing & Allied Health Sciences Hyderabad (Moomal Group of Colleges), recognized by PNC and affiliated with LUMHS Jamshoro.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
