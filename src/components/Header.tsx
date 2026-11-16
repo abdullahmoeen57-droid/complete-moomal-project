@@ -73,44 +73,27 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdmin }) => {
       </div>
 
       {/* Main Navigation Bar - Strict 3-zone contract */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between gap-3 sm:gap-6">
         {/* Zone 1: Single element brand wordmark / logo */}
         <button
           onClick={() => handleNavClick('home')}
-          className="flex items-center gap-3 text-left focus:outline-hidden group shrink-0"
+          className="flex items-center gap-2.5 sm:gap-3 text-left focus:outline-hidden group min-w-0"
         >
           <img
             src="/assets/aistudio/Moomal_Groups_Of_Colleges_deda5503.jpeg"
             alt="Moomal Group of Colleges Crest"
-            className="w-11 h-11 object-contain rounded-md shadow-xs group-hover:scale-105 transition-transform"
+            className="w-10 h-10 sm:w-11 sm:h-11 shrink-0 object-contain rounded-md shadow-xs group-hover:scale-105 transition-transform"
             referrerPolicy="no-referrer"
           />
-          <div>
-            <div className="font-serif text-lg md:text-xl font-bold tracking-tight text-slate-900 leading-tight">
+          <div className="min-w-0">
+            <div className="font-serif text-[15px] sm:text-lg md:text-xl font-bold tracking-tight text-slate-900 leading-tight truncate">
               Moomal College of Nursing
             </div>
-            <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider">
+            <div className="text-[9px] sm:text-[11px] font-medium text-slate-500 uppercase tracking-wide sm:tracking-wider truncate">
               & Allied Health Sciences Hyderabad
             </div>
           </div>
         </button>
-
-        {/* Zone 2: 4-7 single-line navigation links */}
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600">
-          {navLinks.map(link => (
-            <button
-              key={link.id}
-              onClick={() => handleNavClick(link.id)}
-              className={`whitespace-nowrap transition-colors py-1 cursor-pointer border-b-2 ${
-                currentTab === link.id
-                  ? 'border-amber-600 text-slate-900 font-semibold'
-                  : 'border-transparent hover:text-slate-900 hover:border-slate-300'
-              }`}
-            >
-              {link.label}
-            </button>
-          ))}
-        </nav>
 
         {/* Zone 3: 1 primary CTA action */}
         <div className="flex items-center gap-3 shrink-0">
@@ -124,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdmin }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
+            className="lg:hidden p-2 -mr-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -132,9 +115,28 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAdmin }) => {
         </div>
       </div>
 
+      {/* Desktop navigation: its own row so 9 links never squeeze the logo or Apply button */}
+      <div className="hidden lg:block border-t border-slate-100">
+        <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-center gap-5 xl:gap-8 text-sm font-medium text-slate-600">
+          {navLinks.map(link => (
+            <button
+              key={link.id}
+              onClick={() => handleNavClick(link.id)}
+              className={`whitespace-nowrap transition-colors py-2.5 cursor-pointer border-b-2 ${
+                currentTab === link.id
+                  ? 'border-amber-600 text-slate-900 font-semibold'
+                  : 'border-transparent hover:text-slate-900 hover:border-slate-300'
+              }`}
+            >
+              {link.label}
+            </button>
+          ))}
+        </nav>
+      </div>
+
       {/* Mobile Navigation Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-2 shadow-lg animate-in slide-in-from-top duration-200">
+        <div className="lg:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-1 shadow-lg animate-in slide-in-from-top duration-200 max-h-[calc(100vh-7rem)] overflow-y-auto">
           {navLinks.map(link => (
             <button
               key={link.id}

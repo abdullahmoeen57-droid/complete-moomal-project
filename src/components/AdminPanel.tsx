@@ -528,7 +528,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onClose }) => {
                   <div className="p-4 bg-white space-y-3">
                     <div className="flex items-center gap-3">
                       <img
-                        src={popupAd.imageUrl || "/public/assets/aistudio/Moomal_Groups_Of_Colleges_deda5503.jpeg"}
+                        src={popupAd.imageUrl || "/assets/aistudio/Moomal_Groups_Of_Colleges_deda5503.jpeg"}
                         alt="Preview"
                         className="w-12 h-12 object-contain"
                         referrerPolicy="no-referrer"

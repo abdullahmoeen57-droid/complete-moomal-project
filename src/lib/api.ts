@@ -6,7 +6,7 @@ export function toCamel<T = any>(value: any): T {
     return Object.fromEntries(Object.entries(value).map(([key, item]) => {
       const mapped = toCamel(item);
       const camelKey = key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase());
-      if ((key === 'image' || key === 'image_url' || key === 'photo_url') && typeof mapped === 'string' && mapped.startsWith('/uploads/')) return [camelKey, `${API_BASE}${mapped}`];
+      if ((key === 'image' || key === 'image_url' || key === 'photo_url') && typeof mapped === 'string' && mapped.startsWith('/uploads/')) return [camelKey, `${API_BASE}/api${mapped}`];
       return [camelKey, mapped];
     })) as T;
   }
@@ -26,5 +26,5 @@ export async function apiRequest<T = any>(path: string, options: RequestInit = {
 export async function uploadImage(file: File): Promise<string> {
   const form = new FormData(); form.append('file', file);
   const result = await apiRequest<{url:string}>('/api/uploads/image', {method:'POST', body:form});
-  return result.url.startsWith('http') ? result.url : `${API_BASE}${result.url}`;
+  return result.url.startsWith('http') ? result.url : `${API_BASE}/api${result.url}`;
 }

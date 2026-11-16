@@ -1,0 +1,2 @@
+# Database folder: never accessible from the web.
+Require all denied

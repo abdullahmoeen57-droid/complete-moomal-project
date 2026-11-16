@@ -66,7 +66,7 @@ export const BSNProgramDetails: React.FC<BSNProgramDetailsProps> = ({ onApplyCli
             </h1>
             <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
               A comprehensive 4-year integrated baccalaureate degree program accredited by the{' '}
-              <strong className="text-white">pakistan nursing and midwifery council(PNMC)</strong> and affiliated with the prestigious{' '}
+              <strong className="text-white">pakistan nursing and midwifery council (PNMC)</strong> and affiliated with the prestigious{' '}
               <strong className="text-white">Liaquat University of Medical and Health Sciences (LUMHS), Jamshoro</strong>.
             </p>
 

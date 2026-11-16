@@ -87,7 +87,7 @@ export const FacilitiesView: React.FC = () => {
 
             <div className="h-72 sm:h-96 lg:h-full order-1 lg:order-2 overflow-hidden bg-slate-100">
               <img
-                src="/src/assets/images/college_library_hall_1794147850116.jpg"
+                src="/assets/images/college_library_hall_1794147850116.jpg"
                 alt="Moomal College Medical Library Reading Hall"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
@@ -106,7 +106,7 @@ export const FacilitiesView: React.FC = () => {
           >
             <div className="h-72 sm:h-96 lg:h-full overflow-hidden bg-slate-100">
               <img
-                src="/src/assets/images/campus_student_cafeteria_1794147849871.jpg"
+                src="/assets/images/campus_student_cafeteria_1794147849871.jpg"
                 alt="Moomal College Student Cafeteria and Dining Hub"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"

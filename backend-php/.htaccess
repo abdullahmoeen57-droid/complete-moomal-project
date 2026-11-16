@@ -1,0 +1,18 @@
+# Moomal College API (PHP)
+Options -Indexes
+DirectoryIndex index.php
+
+# Never serve config, helpers, notes or the database directly.
+<FilesMatch "^(config\.php|config\.sample\.php|lib\.php|dev-router\.php|README\.md)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Image links look like /api/uploads/<file>. When the API is the root of its own
+    # subdomain (api.moomal.edu.pk) the file is really in uploads/<file>.
+    RewriteRule ^api/uploads/([A-Za-z0-9]+\.(jpg|png|webp))$ uploads/$1 [L]
+    # Real files (uploaded images) are served directly; everything else goes to index.php.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>

@@ -52,7 +52,7 @@ export const AdmissionsApplySection: React.FC = () => {
     }
 
     if (formData.interMarks / formData.interTotal < 0.5) {
-      setErrorMsg('Minimum 50% marks in F.Sc (Pre-Medical) is required by PNC regulations.');
+      setErrorMsg('Minimum 50% marks in F.Sc (Pre-Medical) is required by PNMC regulations.');
       return;
     }
 
@@ -88,7 +88,7 @@ export const AdmissionsApplySection: React.FC = () => {
             Apply Online for BSN (4-Years)
           </h1>
           <p className="text-sm text-slate-600 mt-2">
-            Submit your admission application for the Bachelor of Science in Nursing degree affiliated with LUMHS Jamshoro and recognized by the Pakistan Nursing Council.
+            Submit your admission application for the Bachelor of Science in Nursing degree affiliated with LUMHS Jamshoro and recognized by the Pakistan Nursing and Midwifery Council (PNMC).
           </p>
         </div>
 
@@ -253,7 +253,7 @@ export const AdmissionsApplySection: React.FC = () => {
                     Bachelor of Science in Nursing (BSN - 4 Years)
                   </div>
                   <p className="text-[11px] text-slate-500 mt-0.5">
-                    Recognized by Pakistan Nursing Council (PNC) & Affiliated with LUMHS Jamshoro.
+                    Recognized by pakistan nursing and midwifery council (PNMC) & Affiliated with LUMHS Jamshoro.
                   </p>
                 </div>
 

@@ -127,6 +127,9 @@ def bootstrap_admin():
         admin = db.query(models.AdminUserModel).filter_by(username=ADMIN_USERNAME).first()
         if not admin:
             db.add(models.AdminUserModel(username=ADMIN_USERNAME,password_hash=make_password_hash(ADMIN_PASSWORD))); db.commit()
+        elif os.getenv("ADMIN_RESET_PASSWORD", "false").lower() == "true":
+            # One-off recovery: set ADMIN_RESET_PASSWORD=true, restart once, then set it back to false.
+            admin.password_hash=make_password_hash(ADMIN_PASSWORD); db.commit()
     finally: db.close()
 
 @app.post("/api/auth/login")
@@ -244,6 +247,10 @@ def update_college_info(data: CollegeInfoUpdate,db: Session=Depends(get_db),admi
     db.commit(); db.refresh(info); return info
 @app.get("/api/health")
 def health_check(): return {"status":"online","institution":"Moomal College of Nursing & Allied Health Sciences"}
+
+# On cPanel only /api/* reaches this app, so serve uploaded images under /api/uploads too.
+# Mounted last so POST /api/uploads/image above still matches its route first.
+app.mount("/api/uploads", StaticFiles(directory=str(UPLOAD_DIR)), name="api_uploads")
 if __name__=="__main__":
     import uvicorn
     uvicorn.run("main:app",host="127.0.0.1",port=8000,reload=True)

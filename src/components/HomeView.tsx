@@ -31,8 +31,8 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
                 <span>Admissions Open • Academic Session {admissionSettings.sessionYear}</span>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-                Shang Compassionate Nurses, Empowering Healthcare Leaders.
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight text-white leading-tight">
+                Shaping Compassionate Nurses, Empowering Healthcare Leaders.
               </h1>
 
               <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl">
@@ -78,7 +78,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-800 aspect-4/3 sm:aspect-auto sm:h-[420px]">
                 <img
-                  src="/src/assets/images/nursing_skills_lab_1794147849707.jpg"
+                  src="/assets/images/nursing_skills_lab_1794147849707.jpg"
                   alt="Moomal College Nursing Clinical Skills Training"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

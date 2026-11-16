@@ -57,7 +57,7 @@ export const LeadershipPageView: React.FC = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
             {leadershipData.executiveCouncil.map((name, i) => (
               <div
                 key={i}
@@ -66,8 +66,8 @@ export const LeadershipPageView: React.FC = () => {
                 <div className="w-7 h-7 rounded-lg bg-slate-900 text-amber-300 flex items-center justify-center font-bold text-xs shrink-0">
                   {i + 1}
                 </div>
-                <div>
-                  <span className="font-bold text-slate-900 block truncate">{name}</span>
+                <div className="min-w-0">
+                  <span className="font-bold text-slate-900 block break-words">{name}</span>
                   <span className="text-[10px] text-slate-400">Executive Member</span>
                 </div>
               </div>

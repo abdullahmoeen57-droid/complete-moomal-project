@@ -47,7 +47,7 @@ export const AboutView: React.FC = () => {
             About Moomal College of Nursing
           </h1>
           <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-            Formed under the umbrella of <strong>Moomal Education Private Limited (Moomal Group of Colleges)</strong> to fulfill the growing demand for healthcare services in Sindh, providing quality nursing education affiliated with <strong>LUMHS Jamshoro</strong> and recognized by the <strong>pakistan nursing and midwifery council(PNMC)</strong>.
+            Formed under the umbrella of <strong>Moomal Education Private Limited (Moomal Group of Colleges)</strong> to fulfill the growing demand for healthcare services in Sindh, providing quality nursing education affiliated with <strong>LUMHS Jamshoro</strong> and recognized by the <strong>pakistan nursing and midwifery council (PNMC)</strong>.
           </p>
         </motion.div>
       </section>
@@ -165,7 +165,7 @@ export const AboutView: React.FC = () => {
               <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 block mb-1">
                 Statutory Standards
               </span>
-              <h2 className="font-serif text-2xl font-bold text-slate-900 mb-3">PNC Core Values</h2>
+              <h2 className="font-serif text-2xl font-bold text-slate-900 mb-3">PNMC Core Values</h2>
               <p className="text-xs text-slate-600 leading-relaxed mb-3">
                 Pakistan Nursing and Midwifery Council(PNMC) foundational pillars:
               </p>

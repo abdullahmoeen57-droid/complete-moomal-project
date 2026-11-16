@@ -1,3 +1,4 @@
+
 import { CollegeInfo, PopupAd, FacultyMember, NewsEvent, AdmissionSettings, AdmissionApplication } from '../types';
 
 export const initialCollegeInfo: CollegeInfo = {
@@ -30,7 +31,7 @@ export const initialPopupAd: PopupAd = {
   description: "Applications are now invited for the 4-Year BSN Program. Recognized by Pakistan Nursing Council (PNC) and approved by Health Department Sindh. Limited seats available on merit.",
   buttonText: "Apply Online Now",
   buttonLink: "#admissions",
-  imageUrl: "/public/assets/aistudio/Moomal_Groups_Of_Colleges_deda5503.jpeg",
+  imageUrl: "/assets/aistudio/Moomal_Groups_Of_Colleges_deda5503.jpeg",
   showDismissForToday: true,
 };
 
@@ -49,27 +50,32 @@ export const initialAdmissionSettings: AdmissionSettings = {
 };
 
 export const leadershipData = {
-  chairman: {
-    name: "Dr. Ghulam Mustafa Butt",
-    title: "Chairman and Managing Director",
-    org: "Moomal Education Private Limited • Moomal Group of Colleges",
-    photo: "/public/assets/aistudio/Dr_Ghulam_Mustufa_Chairman_27b5c6cf.jpeg",
-    message: "Any institution can be proud of its students only if they are acquiring quality education. When it is related to health science, it becomes even more significant. That is the whole philosophy behind the establishment of Moomal college of nursing and Allied Health Sciences. It has been our motto to impart quality education and by the grace of Allah the college is trying to achieve its goal perfectly. I from the depth of my heart, congratulate the team for this endeavor. I am fully confident that the faculty comprising of highly qualified, most experienced and dedicated/committed nursing professionals and doctors, will deliver and share their qualities with incoming students and future nurses. In the end, I must say that it is not less than a miracle to make it possible within a very short period of time.",
-  },
+  // CEO
   ceo: {
     name: "Mr. Altaf Hussain Butt",
-    title: "Chief Executive Officer & Chief Financial Officer",
+    title: "Chief Executive Officer & CEO",
     org: "Moomal Education Private Limited • Moomal Group of Colleges",
-    photo: "/public/assets/aistudio/Altaf_Hussain_Butt_CEO_3a350340.jpeg",
+    photo: "/assets/aistudio/Altaf_Hussain_Butt_CEO_3a350340.jpeg",
     message: "At Moomal Group of Colleges, our vision is grounded in student-first educational infrastructure and moral integrity. We have equipped Moomal College of Nursing with world-class learning facilities, clinical simulation equipment, and strong university affiliations with LUMHS to guarantee our nursing graduates rank amongst the finest medical professionals globally.",
   },
+
+  // CHAIRMAN
+  chairman: {
+    name: "Dr. Ghulam Mustafa Butt",
+    title: "Chairman & Managing Director",
+    org: "Moomal Education Private Limited • Moomal Group of Colleges",
+    photo: "/assets/aistudio/Dr_Ghulam_Mustufa_Chairman_27b5c6cf.jpeg",
+    message: "Any institution can be proud of its students only if they are acquiring quality education. When it is related to health science, it becomes even more significant. That is the whole philosophy behind the establishment of Moomal college of nursing and Allied Health Sciences. It has been our motto to impart quality education and by the grace of Allah the college is trying to achieve its goal perfectly. I from the depth of my heart, congratulate the team for this endeavor. I am fully confident that the faculty comprising of highly qualified, most experienced and dedicated/committed nursing professionals and doctors, will deliver and share their qualities with incoming students and future nurses. In the end, I must say that it is not less than a miracle to make it possible within a very short period of time.",
+  },
+
   principal: {
     name: "Ms. Nazia",
     title: "Principal & Assistant Professor",
     org: "Moomal College of Nursing & Allied Health Sciences Hyderabad",
-    photo: "/public/assets/aistudio/Ms_Nazia_Principle_d237453b.jpeg",
+    photo: "/assets/aistudio/Ms_Nazia_Principle_d237453b.jpeg",
     message: "It is a great source of pride for me to introduce new programmers the BSCN at Moomal College Of Nursing & Allied Health Sciences Hyderabad. Considering the shortage of qualified nursing staff in Pakistan, an extreme need exists to establish programs that offer high standards of education and professionalism. By starting these programs, we intend to contribute to strengthening the healthcare system in Pakistan. We Aim to provide knowledge and skills from bedside nursing care to nursing educators, researchers and policy makers. We are determined to reach international standards in the field of nursing education in Pakistan and have chosen well qualified and experienced faculty members as part of our team. I hope that in the years ahead, Insha'Allah, we will be able to make major contribution in improving the Healthcare system in Sindh led by our qualified, motivated and professionally sound graduates.",
   },
+
   adminOffice: [
     { name: "Dr. Maqsood Ahmed Hingoro", role: "Director Administration", department: "Administration Directorate" },
     { name: "Ashfaq Hussain Butt", role: "Deputy Director Administrator", department: "Operations & Admin" },
@@ -77,6 +83,7 @@ export const leadershipData = {
     { name: "M. Niaz", role: "Admin / Assistant", department: "Records & Support" },
     { name: "Dr. Muhammad Mushtaque Khan", role: "Director Academic & Executive Director", department: "Academic Affairs" },
   ],
+
   executiveCouncil: [
     "Dr. Permanand", "Dr. Ali Maqbool", "Dr. Qamar un Nisa", "Dr. Rana Muhammad Ashfaq",
     "Dr. Vikram Paul", "Dr. Raj Kumar Sufi", "Prof. Muhammad Laique Thebo", "Dr. Habib Memon",
@@ -94,7 +101,7 @@ export const initialFaculty: FacultyMember[] = [
     category: "leadership",
     qualification: "MSN / BSN, Registered Nurse (PNC)",
     bio: "Visionary academic leader with extensive experience in nursing education, clinical curriculum design, and healthcare institutional administration.",
-    photoUrl: "/public/assets/aistudio/Ms_Nazia_Principle_d237453b.jpeg",
+    photoUrl: "/assets/aistudio/Ms_Nazia_Principle_d237453b.jpeg",
   },
   {
     id: "fac-2",
@@ -363,7 +370,7 @@ export const facilitiesData = [
     id: "fac-library",
     title: "Medical & Health Sciences Library",
     shortDesc: "Comprehensive collection of nursing journals, medical reference volumes, and quiet study workstations.",
-    image: "/src/assets/images/college_library_hall_1794147850116.jpg",
+    image: "/assets/images/college_library_hall_1794147850116.jpg",
     details: [
       "Extensive nursing text archives affiliated with LUMHS syllabus",
       "Digital research terminals and high-speed Wi-Fi access",
@@ -375,7 +382,7 @@ export const facilitiesData = [
     id: "fac-cafeteria",
     title: "Student Cafeteria & Dining Lounge",
     shortDesc: "Hygienic, comfortable dining hall and social hub serving fresh refreshments, tea, and balanced meals.",
-    image: "/src/assets/images/campus_student_cafeteria_1794147849871.jpg",
+    image: "/assets/images/campus_student_cafeteria_1794147849871.jpg",
     details: [
       "Strict food safety and hygiene monitoring protocols",
       "Warm, modern seating accommodating clinical cohorts and faculty",
@@ -387,7 +394,7 @@ export const facilitiesData = [
     id: "fac-clinical",
     title: "Accredited Clinical Training Rotations",
     shortDesc: "Hands-on clinical bedside rotations at Civi Hospital and Shah Bhittai Govt. Hospital.",
-    image: "/src/assets/images/nursing_skills_lab_1794147849707.jpg",
+    image: "/assets/images/nursing_skills_lab_1794147849707.jpg",
     details: [
       "Clinical affiliation with Civi Hospital",
       "Public health & emergency exposure at Shah Bhittai Govt. Hospital Latifabad",
